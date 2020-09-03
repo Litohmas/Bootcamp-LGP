@@ -1,0 +1,31 @@
+#importation des extensions packages
+import os
+import requests
+from bs4 import BeautifulSoup
+
+#se placer dans le document des données
+os.chdir('linux-git-python/books')
+
+
+#insérer les noms des documents dans une liste
+list_book=os.listdir()
+
+#lire les noms des auteurs et les noms des différents livres
+for i in list_book:
+	file=open(i)
+	book=[]
+	book=file.readlines()
+	for line in book:
+		if 'Title:' in line:
+			print(line)
+		if 'Author:' in line:
+			print(line)
+		 
+		
+	
+		
+
+
+
+
+print("done")
